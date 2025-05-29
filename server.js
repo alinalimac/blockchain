@@ -4,9 +4,30 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-app.use(cors()); // <- разрешает все источники
 
-app.get('/get-config', (req, res) => {
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500'
+}
+
+// Middleware для проверки источника запроса
+const checkRequestSource = (req, res, next) => {
+  const allowedDomains = [
+    'http://127.0.0.1:5500',         
+  ];
+
+  const referer = req.headers.referer || req.headers.origin;
+  if (!referer || !allowedDomains.some(domain => referer.startsWith(domain))) {
+    return res.status(403).json({
+      error: 'Forbidden',
+      message: 'Direct browser access is not allowed. Use only from trusted domain.'
+    });
+  }
+
+  next();
+};
+
+
+app.get('/get-config', checkRequestSource, cors(corsOptions), (req, res) => {
     const config = {
         PINATA_API_KEY: process.env.PINATA_API_KEY,
         PINATA_API_SECRET: process.env.PINATA_API_SECRET,
