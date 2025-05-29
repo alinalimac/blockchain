@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthChain - Patient Portal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>HealthChain <span>Patient Portal</span></h1>
+            </div>
+            <button id="connectWallet" class="btn btn-primary">
+                <span class="icon">🔗</span> Connect Wallet
+            </button>
+        </header>
+
+        <main class="dashboard">
+            <section class="card registration-card">
+                <div class="card-header">
+                    <h2><span class="icon">📝</span> Patient Registration</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="patientName">Full Name</label>
+                        <input type="text" id="patientName" placeholder="John Doe" class="input-field">
+                    </div>
+                    <div class="form-group">
+                        <label for="patientDob">Date of Birth</label>
+                        <input type="date" id="patientDob" class="input-field">
+                    </div>
+                    <button id="registerBtn" class="btn btn-accent">
+                        <span class="icon">✅</span> Complete Registration
+                    </button>
+                </div>
+            </section>
+
+            <section class="card data-card">
+                <div class="card-header">
+                    <h2><span class="icon">📋</span> My Medical Records</h2>
+                </div>
+                <div class="card-body">
+                    <div id="patientInfo" class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span id="infoName" class="info-value">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Date of Birth:</span>
+                            <span id="infoDob" class="info-value">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Wallet:</span>
+                            <span id="infoWallet" class="info-value">-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="grantAccessBtn" class="btn btn-primary">
+                            <span class="icon">👨‍⚕️</span> Grant Doctor Access
+                        </button>
+                        <button id="viewRecordsBtn" class="btn btn-secondary">
+                            <span class="icon">👀</span> View My Records
+                        </button>
+                    </div>
+                    
+                    <div id="recordsDisplay" class="records-container"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 HealthChain | Secure Medical Data Management</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Support</a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="accessModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Grant Access to Doctor</h3>
+            <input type="text" id="doctorAddress" placeholder="Enter doctor's wallet address" class="input-field">
+            <button id="confirmGrantBtn" class="btn btn-accent">Grant Access</button>
+        </div>
+    </div>
+
+    <script src="js/patient.js"></script>
+</body>
+</html>

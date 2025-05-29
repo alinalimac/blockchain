@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthChain | Choose Role</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-img" style="background: var(--accent);"></div>
+                <h1>Health<span>Chain</span></h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="card" style="max-width: 800px; margin: 2rem auto; text-align: center;">
+                <div class="card-header">
+                    <h2>Welcome to HealthChain</h2>
+                </div>
+                <div class="card-body">
+                    <p style="margin-bottom: 2rem; font-size: 1.1rem; color: rgba(255, 255, 255, 0.8);">
+                        Decentralized healthcare records on the blockchain. Please select your role to continue.
+                    </p>
+                    
+                    <div class="info-grid" style="grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0;">
+                        <div class="role-card" onclick="window.location.href='patient.html'">
+                            <div class="card" style="cursor: pointer; height: 100%;">
+                                <div class="card-body">
+                                    <svg style="width: 60px; height: 60px; margin-bottom: 1rem; fill: var(--accent);" viewBox="0 0 24 24">
+                                        <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                                    </svg>
+                                    <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Patient</h3>
+                                    <p style="color: rgba(255, 255, 255, 0.7);">Access your medical records and share them with healthcare providers</p>
+                                    <button class="btn btn-accent" style="margin-top: 1.5rem;">Continue as Patient</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="role-card" onclick="window.location.href='doctor.html'">
+                            <div class="card" style="cursor: pointer; height: 100%;">
+                                <div class="card-body">
+                                    <svg style="width: 60px; height: 60px; margin-bottom: 1rem; fill: var(--primary);" viewBox="0 0 24 24">
+                                        <path d="M12,3L2,12H5V20H19V12H22L12,3M12,8.75A2.25,2.25 0 0,1 14.25,11A2.25,2.25 0 0,1 12,13.25A2.25,2.25 0 0,1 9.75,11A2.25,2.25 0 0,1 12,8.75M12,15C13.5,15 16.5,15.75 16.5,17.25V18H7.5V17.25C7.5,15.75 10.5,15 12,15Z" />
+                                    </svg>
+                                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Doctor</h3>
+                                    <p style="color: rgba(255, 255, 255, 0.7);">View and update patient records with secure blockchain technology</p>
+                                    <button class="btn btn-primary" style="margin-top: 1.5rem;">Continue as Doctor</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Powered by Ethereum | © 2025 HealthChain</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
