@@ -1,6 +1,6 @@
 # HEALTHCHAIN 
 
-This is a code of HealthChain project which is a prototype of a decentrilized system for storyng medical data. We use **MegaTestETH** in this prototype. Etherium is a preferable cryptocurrency to use in a real project.
+This is a code of HealthChain project which is a prototype of a decenterilized system for storing medical data. We use **MegaTestETH** in this prototype. Etherium is a preferable cryptocurrency to use in a real project.
 
 > [!IMPORTANT]
 > All contracts were deployed in REMIX. Here we only have the Solidity code.
